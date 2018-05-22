@@ -3,11 +3,10 @@
   "version": "0.0.0",
   "description": "latex-ts",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/denismaster/latex.ts",
   "author": {
-    "name": "",
-    "email": "",
-    "url": ""
+    "name": "denismaster",
+    "email": "denismaster@outlook.com"
   },
   "keywords": [
     ""
@@ -29,10 +28,13 @@
     "watch": "npm run build -- --watch",
     "watch:test": "jest --watch"
   },
-  "dependencies": {},
+  "dependencies": {
+    "temp": "^0.8.3"
+  },
   "devDependencies": {
     "@types/jest": "^22.0.1",
     "@types/node": "^8.0.0",
+    "@types/temp": "^0.8.32",
     "coveralls": "^2.0.0",
     "jest": "^22.0.4",
     "prettier": "^1.5.2",
