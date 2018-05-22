@@ -39,11 +39,11 @@ export default async (doc: string, options: ILatexOptions) => {
         {
           cwd: folderPath,
           env: process.env,
-          stdio: ['ignore', 'ignore', 'ignore'],
+          //stdio: ['ignore', 'ignore', 'ignore'],
         }
       );
 
-      tex.stdin.on('data', err => {
+      tex.stdout.on('data', err => {
         console.log(err);
       });
 
@@ -52,7 +52,7 @@ export default async (doc: string, options: ILatexOptions) => {
       });
 
       //Wait for LaTeX to finish its thing
-      tex.on('exit', (code, signal) => {
+      tex.on('close', (code, signal) => {
         if (code !== 0) {
           console.log(`latex process exited with code ${code}`);
           return;
